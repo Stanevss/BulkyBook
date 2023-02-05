@@ -103,7 +103,7 @@ public class ProductController : Controller
             {
                 file.CopyTo(fileStreams);
             }
-            obj.Product.ImageUrl = @"\omages\products"+fileName+extension;
+            obj.Product.ImageUrl = @"\images\products\"+fileName+extension;
         }
 
         if (ModelState.IsValid)
