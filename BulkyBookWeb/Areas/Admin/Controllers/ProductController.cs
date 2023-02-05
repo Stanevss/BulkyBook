@@ -12,9 +12,11 @@ public class ProductController : Controller
     //private readonly ApplicationDbContext _db;
     //private readonly IProductRepository _db;
     private readonly IUnitOfWork _unitOfWork;
-    public ProductController(IUnitOfWork unitOfWork)
+    private readonly IWebHostEnvironment _hostEnvironment;
+    public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
     {
         _unitOfWork = unitOfWork;
+        _hostEnvironment = hostEnvironment;
     }
     public IActionResult Index()
     {
@@ -88,12 +90,25 @@ public class ProductController : Controller
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Upsert(ProductVM obj, IFormFile file)
+    public IActionResult Upsert(ProductVM obj, IFormFile? file)
     {
+        string wwwRootPath = _hostEnvironment.WebRootPath;
+        if(file!=null)
+        {
+            string fileName = Guid.NewGuid().ToString();
+            var uploads = Path.Combine(wwwRootPath, @"images\products");
+            var extension = Path.GetExtension(file.FileName);
+
+            using (var fileStreams = new FileStream(Path.Combine(uploads, fileName+extension), FileMode.Create))
+            {
+                file.CopyTo(fileStreams);
+            }
+            obj.Product.ImageUrl = @"\omages\products"+fileName+extension;
+        }
 
         if (ModelState.IsValid)
         {
-            //_unitOfWork.Product.Update(obj);
+            _unitOfWork.Product.Add(obj.Product);
             _unitOfWork.Save();
             TempData["success"] = "Product updated successfully";
             return RedirectToAction("Index");
