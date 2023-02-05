@@ -68,7 +68,7 @@ public class ProductController : Controller
         {
             // create product
             ViewBag.CategoryList = CategoryList;
-            ViewBag.CoverTypeList = CoverTypeList;
+            ViewData["CoverTypeList"] = CoverTypeList;
             return View(product);
         } 
         else
