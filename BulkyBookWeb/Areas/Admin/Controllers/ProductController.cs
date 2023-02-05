@@ -20,8 +20,8 @@ public class ProductController : Controller
     }
     public IActionResult Index()
     {
-        IEnumerable<Product> objProductList = _unitOfWork.Product.GetAll();
-        return View(objProductList);
+       
+        return View();
     }
 
     // GET
@@ -151,5 +151,14 @@ public class ProductController : Controller
         TempData["success"] = "Product deleted successfully";
         return RedirectToAction("Index");
     }
-}
 
+#region API CALLS
+[HttpGet]
+public IActionResult GetAll()
+{
+    var productList = _unitOfWork.Product.GetAll();
+        return Json(new { data = productList });
+}
+    #endregion
+
+}
