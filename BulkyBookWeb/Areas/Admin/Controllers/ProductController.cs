@@ -46,26 +46,27 @@ public class ProductController : Controller
 
 
     // GET
-    public IActionResult Edit(int? id)
+    public IActionResult Upsert(int? id)
     {
+        Product product = new();
         if (id == null || id == 0)
         {
-            return NotFound();
-        }
-        var ProductFromDb = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
-
-        if (ProductFromDb == null)
+            // create product
+            return View(product);
+        } 
+        else
         {
-            return NotFound();
+            // update product
         }
+        
 
-        return View(ProductFromDb);
+        return View(product);
     }
 
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(Product obj)
+    public IActionResult Upsert(Product obj)
     {
 
         if (ModelState.IsValid)
