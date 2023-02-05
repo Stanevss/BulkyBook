@@ -571,3 +571,5 @@ C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBoo
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Models.dll
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Models.pdb
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
