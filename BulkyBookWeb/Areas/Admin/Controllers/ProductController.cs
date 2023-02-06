@@ -49,42 +49,40 @@ public class ProductController : Controller
     }
 
 
-    // GET
+    //GET
     public IActionResult Upsert(int? id)
     {
         ProductVM productVM = new()
         {
             Product = new(),
-            CategoryList = _unitOfWork.Category.GetAll().Select(
-            i => new SelectListItem
+            CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
             {
                 Text = i.Name,
                 Value = i.Id.ToString()
             }),
-            CoverTypeList = _unitOfWork.CoverType.GetAll().Select(
-            u => new SelectListItem
+            CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
             {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            })
-
+                Text = i.Name,
+                Value = i.Id.ToString()
+            }),
         };
 
-       
         if (id == null || id == 0)
         {
-            // create product
+            //create product
             //ViewBag.CategoryList = CategoryList;
             //ViewData["CoverTypeList"] = CoverTypeList;
             return View(productVM);
-        } 
+        }
         else
         {
-            // update product
-        }
-        
+            productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+            return View(productVM);
 
-        return View(productVM);
+            //update product
+        }
+
+
     }
 
     // POST

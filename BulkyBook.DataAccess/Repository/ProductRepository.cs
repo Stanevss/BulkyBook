@@ -29,10 +29,10 @@ namespace BulkyBook.DataAccess.Repository
                 objFromDb.ListPrice = obj.ListPrice;
                 objFromDb.Price100 = obj.Price100;
                 objFromDb.Description = obj.Description;
-                objFromDb.Category = obj.Category;
+                objFromDb.CategoryId = obj.CategoryId;
                 objFromDb.Author = obj.Author;
                 objFromDb.CoverTypeId = obj.CoverTypeId;
-                if(obj.ImageUrl != null)
+                if (obj.ImageUrl != null)
                 {
                     objFromDb.ImageUrl = obj.ImageUrl;
                 }
