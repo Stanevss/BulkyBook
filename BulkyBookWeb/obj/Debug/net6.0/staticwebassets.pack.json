@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Stanislav\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\26de92ba-b9ac-49c0-b21a-41d58cb530d7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\26de92ba-b9ac-49c0-b21a-41d58cb530d7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Stanislav\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\35146347-932d-46fc-bcd5-ed5863e965be.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\35146347-932d-46fc-bcd5-ed5863e965be.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Stanislav\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\a714edca-8a3f-4967-bb69-507a251d678b.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\a714edca-8a3f-4967-bb69-507a251d678b.jpg"
+    },
+    {
       "Id": "C:\\Users\\Stanislav\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
