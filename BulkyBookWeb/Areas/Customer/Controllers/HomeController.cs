@@ -29,7 +29,7 @@ public class HomeController : Controller
         ShoppingCart cartObj = new()
         {
             Count = 1,
-            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,CoverType")
+            Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id, includeProperties:"Category,CoverType")
         };
 
         return View(cartObj);
