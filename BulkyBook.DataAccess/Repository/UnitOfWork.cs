@@ -30,7 +30,7 @@ namespace BulkyBook.DataAccess.Repository
         public IShoppingCartRepository ShoppingCart { get; private set; }
         public IApplicationUserRepository ApplicationUser { get; private set; }
 
-    public void Save()
+        public void Save()
         {
             _db.SaveChanges();
         }

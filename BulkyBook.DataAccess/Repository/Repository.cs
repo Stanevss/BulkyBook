@@ -26,22 +26,26 @@ namespace BulkyBook.DataAccess.Repository
             dbSet.Add(entity);
         }
 
-        //includeProp - "Category, CoverType"
-        public IEnumerable<T> GetAll(string? includeProperties = null)
-        {
-            IQueryable<T> query = dbSet;
-            if(includeProperties != null)
+		//includeProp - "Category, CoverType"
+		public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+		{
+			IQueryable<T> query = dbSet;
+            if(filter!=null)
             {
-                foreach(var includeProp in includeProperties.Split(new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
-                {
-                    query = query.Include(includeProp);
-                }
+                query = query.Where(filter);
             }
-           
-            return query.ToList();  
-        }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
+			if (includeProperties != null)
+			{
+				foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+				{
+					query = query.Include(includeProp);
+				}
+			}
+			return query.ToList();
+		}
+
+		public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
 

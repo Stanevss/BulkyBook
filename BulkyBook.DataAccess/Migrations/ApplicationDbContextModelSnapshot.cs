@@ -432,7 +432,7 @@ namespace BulkyBook.DataAccess.Migrations
 
             modelBuilder.Entity("BulkyBook.Models.ShoppingCart", b =>
                 {
-                    b.HasOne("BulkyBook.Models.ApplicationUser", "MyProperty")
+                    b.HasOne("BulkyBook.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ApplicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -444,7 +444,7 @@ namespace BulkyBook.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("MyProperty");
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Product");
                 });
