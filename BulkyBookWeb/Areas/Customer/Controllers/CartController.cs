@@ -13,6 +13,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 	public class CartController : Controller
 	{
 		private readonly IUnitOfWork _unitOfWork;
+		[BindProperty]
 		public ShoppingCartVM ShoppingCartVM { get; set; }
 
 		public int OrderTotal { get; set; }
@@ -86,6 +87,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
 			ShoppingCartVM.ListCart = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value,
 				includeProperties: "Product");
+
 			ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
 			ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
 			ShoppingCartVM.OrderHeader.OrderDate = DateTime.Now;
