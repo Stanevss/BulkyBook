@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pEf8qM4BGv0a0ZOlFDQYtGcynnZtsekZdxFoz5Z1mGgLcJTkXx8nNh94aUGkJZYavbQ7XmJuyyH2pm6FqeVvug==",
+  "dgSpecHash": "O5sHtUL8fiRLlALB576p/mZz5Tg3nE9QgX2W4egaWERo8mtF2zmQdmsiKo9pVX/VeiE6UtaAp5rPNsUPpN2p5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stanislav\\source\\repos\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
@@ -141,6 +141,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Stanislav\\.nuget\\packages\\stripe.net\\41.6.0\\stripe.net.41.6.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Stanislav\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Stanislav\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
