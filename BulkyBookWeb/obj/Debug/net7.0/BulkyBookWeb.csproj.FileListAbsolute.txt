@@ -583,3 +583,8 @@ C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\Microsof
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.dll
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\BulkyBook.Utility.pdb
 C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\Stripe.net.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\refs\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Stanislav\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net7.0\refs\Microsoft.Extensions.Identity.Stores.dll
